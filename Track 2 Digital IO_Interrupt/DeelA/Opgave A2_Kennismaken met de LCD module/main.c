@@ -4,6 +4,7 @@
  * Created: 2/2/2022 10:55:16 AM
  *  Author: dutch
  */ 
+#define F_CPU 8e6
 
 #include <xc.h>
 #include <avr/io.h>
