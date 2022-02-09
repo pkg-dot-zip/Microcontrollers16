@@ -14,7 +14,7 @@ void wait( int ms ) {
 }
 
 ISR( INT1_vect ) {
-    PORTC = SOLETURNON(index-- % 8); // Cycle light down.
+	PORTC = SOLETURNON(index-- % 8); // Cycle light down.
 }
 
 ISR( INT2_vect ) {
