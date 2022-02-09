@@ -12,9 +12,9 @@
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>interrupt_easy</AssemblyName>
-    <Name>interrupt_easy</Name>
-    <RootNamespace>interrupt_easy</RootNamespace>
+    <AssemblyName>interrupts_interm</AssemblyName>
+    <Name>interrupts_interm</Name>
+    <RootNamespace>interrupts_interm</RootNamespace>
     <ToolchainFlavour>XC8_2.31</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
