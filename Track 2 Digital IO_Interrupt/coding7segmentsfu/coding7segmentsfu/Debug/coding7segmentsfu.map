@@ -3,9 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o (exit)
 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_copy_data.o)
-                              main.o (__do_clear_bss)
-c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
-                              main.o (__xload_1)
+                              main.o (__do_copy_data)
 
 Discarded input sections
 
@@ -14,9 +12,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 main.o
  .data          0x0000000000000000        0x0 main.o
  .bss           0x0000000000000000        0x0 main.o
- .text.wait     0x0000000000000000       0x1e main.o
- .progmemx.data.size
-                0x0000000000000000        0x2 main.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_exit.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_exit.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_exit.o)
@@ -49,21 +44,6 @@ Discarded input sections
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_copy_data.o)
- .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
- .text.libgcc.mul
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
- .text.libgcc.div
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
- .text.libgcc.prologue
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
- .text.libgcc.builtins
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
- .text.libgcc.fmul
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
- .text.libgcc.fixed
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
 
 Memory Configuration
 
@@ -191,7 +171,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000       0xea
+.text           0x0000000000000000       0xec
  *(.vectors)
  .vectors       0x0000000000000000       0x8c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
                 0x0000000000000000                __vector_default
@@ -199,44 +179,44 @@ END GROUP
  *(.vectors)
  *(.progmem.gcc*)
  *(.dinit)
- .dinit         0x000000000000008c        0x5 data_init
-                0x0000000000000092                . = ALIGN (0x2)
- *fill*         0x0000000000000091        0x1 
-                0x0000000000000092                __trampolines_start = .
+ .dinit         0x000000000000008c        0x7 data_init
+                0x0000000000000094                . = ALIGN (0x2)
+ *fill*         0x0000000000000093        0x1 
+                0x0000000000000094                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x0000000000000092        0x0 linker stubs
+ .trampolines   0x0000000000000094        0x0 linker stubs
  *(.trampolines*)
-                0x0000000000000092                __trampolines_end = .
+                0x0000000000000094                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
-                0x0000000000000092                . = ALIGN (0x2)
+                0x0000000000000094                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x0000000000000092                __ctors_start = .
+                0x0000000000000094                __ctors_start = .
  *(.ctors)
-                0x0000000000000092                __ctors_end = .
-                0x0000000000000092                __dtors_start = .
+                0x0000000000000094                __ctors_end = .
+                0x0000000000000094                __dtors_start = .
  *(.dtors)
-                0x0000000000000092                __dtors_end = .
+                0x0000000000000094                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000000000000092        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
-                0x0000000000000092                __init
+ .init0         0x0000000000000094        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
+                0x0000000000000094                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000000000000092        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
+ .init2         0x0000000000000094        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000000000000009e       0x40 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_copy_data.o)
-                0x000000000000009e                __do_copy_data
-                0x00000000000000d0                __do_clear_bss
+ .init4         0x00000000000000a0       0x40 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_copy_data.o)
+                0x00000000000000a0                __do_copy_data
+                0x00000000000000d2                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -247,13 +227,13 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000000000000de        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
+ .init9         0x00000000000000e0        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
  *(.init9)
-                0x00000000000000e6                . = ALIGN (0x2)
+                0x00000000000000e8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000000000000e6        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_exit.o)
-                0x00000000000000e6                _exit
-                0x00000000000000e6                exit
+ .fini9         0x00000000000000e8        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_exit.o)
+                0x00000000000000e8                _exit
+                0x00000000000000e8                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -272,11 +252,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000000000000e6        0x4 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_exit.o)
+ .fini0         0x00000000000000e8        0x4 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000000000000ea                _etext = .
+                0x00000000000000ec                _etext = .
 
-.data           0x0000000000800100        0x0 load address 0x00000000000000ea
+.data           0x0000000000800100        0x0 load address 0x00000000000000ec
                 [!provide]                        PROVIDE (__data_start, .)
  *(.gnu.linkonce.d*)
  *(.gnu.linkonce.r*)
@@ -288,8 +268,8 @@ END GROUP
                 [!provide]                        PROVIDE (__bss_start, .)
  *(COMMON)
                 [!provide]                        PROVIDE (__bss_end, .)
-                0x00000000000000ea                __data_load_start = LOADADDR (.data)
-                0x00000000000000ea                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000000000000ec                __data_load_start = LOADADDR (.data)
+                0x00000000000000ec                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0000000000800100        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -354,41 +334,41 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000       0x48
+.debug_aranges  0x0000000000000000       0x28
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x48 main.o
+                0x0000000000000000       0x28 main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0xc39
+.debug_info     0x0000000000000000      0xbf8
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x780 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
- .debug_info    0x0000000000000780      0x4b9 main.o
+ .debug_info    0x0000000000000780      0x478 main.o
 
-.debug_abbrev   0x0000000000000000      0x868
+.debug_abbrev   0x0000000000000000      0x866
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x718 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
- .debug_abbrev  0x0000000000000718      0x150 main.o
+ .debug_abbrev  0x0000000000000718      0x14e main.o
 
-.debug_line     0x0000000000000000      0x31f
+.debug_line     0x0000000000000000      0x296
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x16d C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
- .debug_line    0x000000000000016d      0x1b2 main.o
+ .debug_line    0x000000000000016d      0x129 main.o
 
-.debug_frame    0x0000000000000000      0x104
+.debug_frame    0x0000000000000000       0x44
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x104 main.o
+ .debug_frame   0x0000000000000000       0x44 main.o
 
 .debug_str      0x0000000000000000      0x27d
  *(.debug_str)
  .debug_str     0x0000000000000000      0x27d C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
  .debug_str     0x000000000000027d        0x0 main.o
 
-.debug_loc      0x0000000000000000      0x22b
+.debug_loc      0x0000000000000000       0xd5
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x22b main.o
+ .debug_loc     0x0000000000000000       0xd5 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -408,13 +388,13 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0x38
+.debug_ranges   0x0000000000000000       0x18
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000       0x38 main.o
+ .debug_ranges  0x0000000000000000       0x18 main.o
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(coding7segment_ea.elf elf32-avr)
+OUTPUT(coding7segmentsfu.elf elf32-avr)
 LOAD linker stubs
 LOAD data_init
 
@@ -423,78 +403,51 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
 
-.bss.index      0x0000000000800100        0x2
- .bss.index     0x0000000000800100        0x2 main.o
-                0x0000000000800100                index
+.text.main      0x00000000000000ec       0x76
+ .text.main     0x00000000000000ec       0x76 main.o
+                0x00000000000000ec                main
 
-.progmemx.data.Numbers
-                0x00000000000000ea       0x10
- .progmemx.data.Numbers
-                0x00000000000000ea       0x10 main.o
-                0x00000000000000ea                Numbers
+.text.wait      0x0000000000000162       0x1e
+ .text.wait     0x0000000000000162       0x1e main.o
+                0x0000000000000162                wait
 
-.text.__vector_2
-                0x00000000000000fa       0x84
- .text.__vector_2
-                0x00000000000000fa       0x84 main.o
-                0x00000000000000fa                __vector_2
+.text           0x0000000000000180        0x4
+ .text          0x0000000000000180        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
+                0x0000000000000180                __vector_22
+                0x0000000000000180                __vector_28
+                0x0000000000000180                __vector_1
+                0x0000000000000180                __vector_32
+                0x0000000000000180                __vector_34
+                0x0000000000000180                __vector_24
+                0x0000000000000180                __vector_12
+                0x0000000000000180                __bad_interrupt
+                0x0000000000000180                __vector_6
+                0x0000000000000180                __vector_31
+                0x0000000000000180                __vector_3
+                0x0000000000000180                __vector_23
+                0x0000000000000180                __vector_30
+                0x0000000000000180                __vector_25
+                0x0000000000000180                __vector_11
+                0x0000000000000180                __vector_13
+                0x0000000000000180                __vector_17
+                0x0000000000000180                __vector_19
+                0x0000000000000180                __vector_7
+                0x0000000000000180                __vector_27
+                0x0000000000000180                __vector_5
+                0x0000000000000180                __vector_33
+                0x0000000000000180                __vector_4
+                0x0000000000000180                __vector_9
+                0x0000000000000180                __vector_2
+                0x0000000000000180                __vector_21
+                0x0000000000000180                __vector_15
+                0x0000000000000180                __vector_29
+                0x0000000000000180                __vector_8
+                0x0000000000000180                __vector_26
+                0x0000000000000180                __vector_14
+                0x0000000000000180                __vector_10
+                0x0000000000000180                __vector_16
+                0x0000000000000180                __vector_18
+                0x0000000000000180                __vector_20
 
-.text.__vector_3
-                0x000000000000017e       0x84
- .text.__vector_3
-                0x000000000000017e       0x84 main.o
-                0x000000000000017e                __vector_3
-
-.text.main      0x0000000000000202       0x20
- .text.main     0x0000000000000202       0x20 main.o
-                0x0000000000000202                main
-
-.text.display   0x0000000000000222       0x18
- .text.display  0x0000000000000222       0x18 main.o
-                0x0000000000000222                display
-
-.text.checkResetValue
-                0x000000000000023a       0x10
- .text.checkResetValue
-                0x000000000000023a       0x10 main.o
-                0x000000000000023a                checkResetValue
-
-.text.libgcc    0x000000000000024a        0xe
- .text.libgcc   0x000000000000024a        0xe c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr51/memx-const\libgcc.a(_xload_1.o)
-                0x000000000000024a                __xload_1
-
-.text           0x0000000000000258        0x4
- .text          0x0000000000000258        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr51/memx-const/crtatmega128.o
-                0x0000000000000258                __vector_22
-                0x0000000000000258                __vector_28
-                0x0000000000000258                __vector_1
-                0x0000000000000258                __vector_32
-                0x0000000000000258                __vector_34
-                0x0000000000000258                __vector_24
-                0x0000000000000258                __vector_12
-                0x0000000000000258                __bad_interrupt
-                0x0000000000000258                __vector_6
-                0x0000000000000258                __vector_31
-                0x0000000000000258                __vector_23
-                0x0000000000000258                __vector_30
-                0x0000000000000258                __vector_25
-                0x0000000000000258                __vector_11
-                0x0000000000000258                __vector_13
-                0x0000000000000258                __vector_17
-                0x0000000000000258                __vector_19
-                0x0000000000000258                __vector_7
-                0x0000000000000258                __vector_27
-                0x0000000000000258                __vector_5
-                0x0000000000000258                __vector_33
-                0x0000000000000258                __vector_4
-                0x0000000000000258                __vector_9
-                0x0000000000000258                __vector_21
-                0x0000000000000258                __vector_15
-                0x0000000000000258                __vector_29
-                0x0000000000000258                __vector_8
-                0x0000000000000258                __vector_26
-                0x0000000000000258                __vector_14
-                0x0000000000000258                __vector_10
-                0x0000000000000258                __vector_16
-                0x0000000000000258                __vector_18
-                0x0000000000000258                __vector_20
+.rodata         0x0000000000800100       0x1e load address 0x0000000000000184
+ .rodata        0x0000000000800100       0x1e main.o

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="coding7segment_ea.elf">                 
+  <executable name="coding7segmentsfu.elf">                 
     <memory name="program">              
       <units>bytes</units>                 
       <length>131072</length>                 
-      <used>604</used>                     
-      <free>130468</free>                     
+      <used>418</used>                     
+      <free>130654</free>                     
     </memory>                              
     <memory name="data">                 
       <units>bytes</units>                 
       <length>4096</length>                 
-      <used>2</used>                     
-      <free>4094</free>                     
+      <used>30</used>                     
+      <free>4066</free>                     
     </memory>                              
   </executable>                            
 </project>                                 

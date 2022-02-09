@@ -38,10 +38,18 @@ void display(int digit){
 	PORTB = Numbers[digit];
 }
 
+void checkResetValue() {
+	if ( PIND == 0b00000110 ) {
+		index = 0;
+	}
+}
+
 ISR( INT1_vect ) {
 	if (index > 0) {
 		index--;
 	}
+	
+	checkResetValue();
 	
 	display(index % size); // Cycle light down.
 }
@@ -50,6 +58,8 @@ ISR( INT2_vect ) {
 	if (index < SIZE - 1) {
 		index++;
 	}
+	
+	checkResetValue();
 	
 	display(index % size); // Cycle light up.
 }
@@ -70,7 +80,13 @@ int main( void ) {
 	PORTD = 0x00; // Set first light on.
 
 	// Empty while(true) loop.
-	while (1) {							
+	while (1) {
+		/*
+		if ( PIND == 0b00000110 ) {
+			index = 0;
+			display(index);
+		}
+		*/			
 	}
 
 	return 1;
