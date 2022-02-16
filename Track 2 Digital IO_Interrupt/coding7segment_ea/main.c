@@ -66,7 +66,7 @@ ISR( INT2_vect ) {
 
 int main( void ) {
 	// Init I/O
-	PORTD = 0xFF;			// Set all K to output.
+	PORTD = 0xFF;			// Set all D to output.
 	DDRD = 0xF0;			// PORTD(7:4) output, PORTD(3:0) input	
 	DDRB = 0xFF;			// PORTD(7:4) output, PORTD(3:0) input	
 
