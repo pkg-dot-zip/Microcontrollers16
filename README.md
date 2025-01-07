@@ -28,5 +28,5 @@
 Microcontrollers16 contains exercises made in C. This project was made in college for microcontrollers.
 
 ## ✍️ Authors <a name = "authors"></a>
-- [@OnsPetruske](https://github.com/pkg-dot-zip) - General development
+- [@pkg-dot-zip](https://github.com/pkg-dot-zip) - General development
 - [@SigmaCryo](https://github.com/SigmaCryo/) - General development
